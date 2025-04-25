@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像アップロード</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/graph.js"></script>
+    <script src="./js/scoring.js"></script>
+    <!-- Chart.jsのCDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- タスクバー風のタイトル -->
+    <header>
+        <div class="header-left">
+        </div>
+        <div class="header-center">
+            <a href="./index.html">Book2Image</a>
+        </div>
+        <div class="header-right">
+            <a href="./review-posting.html">
+                <button class="reviewButton" type="button">レビュー投稿へ</button>
+            </a>
+            <a href="./index.html">
+                <button class="topButton" type="button">トップページへ戻る</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- 全体コンテナ -->
+
+    <div class="main-container">
+        <!-- 左側（赤い丸付近） -->
+        <div id="left-container">
+            <h2>書籍リスト(上位2つ)</h2>
+            <div id="book-list">
+                <!-- 書籍情報がここに表示されます -->
+            </div>
+        </div>
+
+        <!-- 右側（画像アップロード部分） -->
+        <div id="right-container" class="container">
+            <div class="image-container">
+                <h2>画像を選んで本を探してみましょう！</h2>
+                <img id="preview" src="" alt="Image Preview" style="display: none;">
+                <label for="imageInput" class="label-file">画像を選択</label>
+                <input type="file" id="imageInput" accept="image/*" required style="display: none;">
+            </div>
+
+            <div class="tabs">
+                <button class="tab-button active" data-emotion="喜">😊 喜</button>
+                <button class="tab-button" data-emotion="怒">😡 怒</button>
+                <button class="tab-button" data-emotion="哀">😢 哀</button>
+                <button class="tab-button" data-emotion="楽">😆 楽</button>
+            </div>
+
+            <button id="submit">検索</button>
+            <br>
+            <canvas id="scatterChart"></canvas>
+            <div>
+                <h4 id="comment"></h4>
+            </div>
+        </div>
+
+        <!-- プレビュー枠は常に表示 -->
+        <div id="imagePreview" class="preview" style="opacity: 0;">
+            <div id="previewContent"></div>
+        </div>
+    </div>
+    </div>
+    <footer>© 2025 <i>Book2Image</footer>
+</body>
+
+</html>

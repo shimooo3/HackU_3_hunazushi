@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レビュー投稿サイト</title>
+    <link rel="stylesheet" href="./css/review-posting.css">
+    <script src="./js/scoring.js"></script>
+    <script type="module" src="./js/review-posting.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+        </div>
+        <div class="header-center">
+            <a href="./index.html">Book2Image</a>
+        </div>
+        <div class="header-right">
+            <a href="./search.html">
+                <button class="searchButton" type="button">検索ページへ</button>
+            </a>
+            <a href="./index.html">
+                <button class="topButton" type="button">トップページへ戻る</button>
+            </a>
+        </div>
+    </header>
+    <div class="flex-zone">
+        <div id="posting-container">
+            <h1>レビューを投稿する</h1>
+            <div class="reviewForm">
+                <div class="review-title">
+                    <label for="title">本のタイトルを教えてください！</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="review-image">
+                    <label for="image">本を象徴する画像をアップロードしてください！</label>
+                    <div class="image-preview" id="imagePreview">
+                        <input type="file" id="image" accept="image/*" required>
+                        <img id="preview" src="" alt="Image Preview" style="display: none;">
+                    </div>
+                </div>
+
+                <label for="emotion">この本のイメージを教えてください！</label>
+                <div class="tabs">
+                    <button class="tab-button active" data-emotion="喜">😊 喜</button>
+                    <button class="tab-button" data-emotion="怒">😡 怒</button>
+                    <button class="tab-button" data-emotion="哀">😢 哀</button>
+                    <button class="tab-button" data-emotion="楽">😆 楽</button>
+                </div>
+                
+                <button id="submit">投稿</button>
+            </div>
+    
+        </div>
+        <div id="submitted-container" style="display: none;">
+            <h1>レビューの投稿が完了しました</h1>
+            <a href="./index.html">
+                <button id="goToTop">トップに戻る</button>
+            </a>
+        </div>
+    </div>
+    <footer>© 2025 <i>Book2Image</footer>
+</body>
+
+</html>
