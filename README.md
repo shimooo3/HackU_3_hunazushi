@@ -11,6 +11,10 @@ from https://github.com/hamabu0531/Hack_U_3
 アプリケーションの構成図を以下に示します（Aさん作成）．
 ![構成図](images/comp.png)
 
+### 画像スコア算出
+推薦時に使用する各画像のスコア計算の模式図を以下に示します（shimooo3作成）．単純なRGB値の計算により実装しました．  
+![構成図](materials/imageScore.jpg)
+
 ## 動作イメージ
 発表時に使用したデモ動画です．
 
